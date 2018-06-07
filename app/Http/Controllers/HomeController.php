@@ -8,18 +8,14 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
 use PHPUnit\Util\Xml;
 use SoapClient,DOMDocument,Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
 
     public function index()
     {
-       /* $BILL_MFALL=DB::table('SZXS_MF')->get();
-        set_time_limit(0);
-        foreach ($BILL_MFALL as $key=>$BILL_MF){
-        self::saveSalesBill($BILL_MF);
-        }*/
-       phpinfo();
+       Log::info($this->get_SalesItem());
     }
 
 
